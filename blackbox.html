@@ -10,22 +10,19 @@
 <body>
 
 <header>
- <div class="logo">
-
-    <img src="images/lcsc-logo.png"
-         class="header-logo"
-         alt="LCSC Logo">
+  <div class="logo">
+    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
 
     <div>
-        <h1>Last Chance Speed Co.</h1>
-        <p>Drive. Build. Repeat.</p>
+      <h1>Last Chance Speed Co.</h1>
+      <p>Drive. Build. Repeat.</p>
     </div>
-
-</div>
+  </div>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="blackbox.html">Black Box</a>
+    <a href="boethos.html">Boēthos</a>
     <a href="index.html#docs">Docs</a>
     <a href="index.html#support">Support</a>
   </nav>
@@ -36,10 +33,10 @@
     <h2>Black Box</h2>
     <h3>Grassroots Driver Data System</h3>
     <p>
-      A grassroots motorsport data system built for GPS logging, IMU data,
-      Bluetooth control, SD card recording, and Boēthos integration.
+      A vehicle-mounted motorsport data logger built for GPS logging, IMU data,
+      Bluetooth control, SD card recording, and Boēthos software integration.
     </p>
-    <a class="button" href="#status">View Status</a>
+    <a class="button" href="#status">View Development Status</a>
   </div>
 
   <div class="hero-image">
@@ -50,8 +47,23 @@
 <section class="about-intro">
   <h2>Driver Data Without the Complication</h2>
   <p>
-    Black Box was created to give grassroots drivers access to meaningful data
-    without the cost and complexity of professional motorsport systems.
+    Black Box was created to give grassroots drivers useful data without needing
+    a professional race engineering setup. The goal is simple: record the run,
+    understand the car, and make better decisions from real information.
+  </p>
+</section>
+
+<section class="about-founder">
+  <h2>Why Black Box Exists</h2>
+  <p>
+    Most grassroots drivers make setup changes based on feel alone. Feel matters,
+    but data helps confirm what the car actually did. Black Box is being developed
+    around real autocross testing, real hardware limitations, and real driver needs.
+  </p>
+
+  <p>
+    It is not meant to replace the driver. It is meant to help the driver see the run
+    more clearly after the helmet comes off.
   </p>
 </section>
 
@@ -86,43 +98,103 @@
 
     <div class="card">
       <h3>Expandable</h3>
-      <p>Future expansion support for nodes, ECU data, sensors, and accessories.</p>
+      <p>Future expansion support for ECU data, CAN bridge input, sensors, and accessories.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Specifications</h2>
+  <h2>Current Hardware</h2>
 
   <div class="cards">
     <div class="card">
-      <h3>GPS</h3>
-      <p>5–10 Hz position and speed logging.</p>
+      <h3>Main Controller</h3>
+      <p>
+        Arduino Mega 2560 development platform used for Rev 1 system testing and firmware development.
+      </p>
     </div>
 
     <div class="card">
-      <h3>IMU</h3>
-      <p>Motion data for acceleration, braking, and rotation review.</p>
+      <h3>GPS Module</h3>
+      <p>
+        NEO-M8N GPS receiver operating at 5–10 Hz for position, speed, course mapping, and gate detection.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Storage</h3>
-      <p>Micro SD card data logging for run review and analysis.</p>
+      <h3>Motion Sensor</h3>
+      <p>
+        MPU-6050 6-axis IMU providing acceleration and rotational movement data.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Real Time Clock</h3>
+      <p>
+        DS3231 RTC module for accurate timestamps and log file organization.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Data Storage</h3>
+      <p>
+        Micro SD card logging with removable storage for post-run review and analysis.
+      </p>
     </div>
 
     <div class="card">
       <h3>Connectivity</h3>
-      <p>Bluetooth connection for phone app setup and control.</p>
+      <p>
+        Bluetooth communication for phone app setup, course configuration, and future run management tools.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>System Specifications</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>GPS Logging</h3>
+      <p>
+        Position, speed, heading, start gate, finish gate, and sector tracking.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Power</h3>
-      <p>Designed for vehicle-mounted motorsport use.</p>
+      <h3>IMU Logging</h3>
+      <p>
+        Lateral acceleration, longitudinal acceleration, and rotational movement recording.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Platform</h3>
-      <p>Current development hardware: Black Box Rev 1.</p>
+      <h3>File Format</h3>
+      <p>
+        CSV-based logging compatible with Boēthos analysis software and spreadsheet tools.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Course Setup</h3>
+      <p>
+        Bluetooth transfer of start, finish, and sector locations from the companion phone app.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Status Indicators</h3>
+      <p>
+        Dedicated LEDs for logging state, GPS lock, Bluetooth connection, and system status.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Expansion Port</h3>
+      <p>
+        DB37 expansion interface planned for ECU data, CAN bridge support, and future sensors.
+      </p>
     </div>
   </div>
 </section>
@@ -140,8 +212,8 @@
         <li>✓ Bluetooth connection working</li>
         <li>✓ Phone app connection working</li>
         <li>✓ Start/finish gate testing</li>
-        <li>✓ 16+ test logs recorded</li>
-        <li>⏳ Beta unit preparation</li>
+        <li>✓ Multiple vehicle test sessions completed</li>
+        <li>⏳ Continued field validation</li>
       </ul>
     </div>
 
@@ -155,6 +227,36 @@
         <li>⏳ Firmware download system</li>
         <li>⏳ Public documentation</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Development Roadmap</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Rev 1</h3>
+      <p>
+        Prove reliable GPS, IMU, SD card logging, Bluetooth connection,
+        phone app setup, and course gate workflow.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Rev 2</h3>
+      <p>
+        Improve enclosure, wiring, power protection, expansion layout,
+        serviceability, and repeatability for local test units.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Future Expansion</h3>
+      <p>
+        ECU data, CAN bridge support, sensor nodes, driver review tools,
+        and deeper Boēthos integration.
+      </p>
     </div>
   </div>
 </section>
@@ -178,7 +280,7 @@
     <div class="card">
       <img src="images/boethos.jpg" alt="Boēthos software">
       <h3>Boēthos Integration</h3>
-      <p>Future software tools for course setup and run review.</p>
+      <p>Software tools for course setup, run review, and data visualization.</p>
     </div>
   </div>
 </section>
@@ -206,7 +308,9 @@
 
 <section id="support">
   <h2>Interested in Black Box?</h2>
-  <p>Black Box is currently in development and preparing for beta units.</p>
+  <p>
+    Black Box is currently in development with local testing and validation as the next step.
+  </p>
   <p><strong>Email:</strong> LastChanceSpeedCo@outlook.com</p>
 </section>
 
