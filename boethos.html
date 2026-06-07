@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boēthos | Last Chance Speed Co.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="boethos-page">
+
+<div id="splash-screen">
+  <div class="splash-content">
+    <img src="images/boethos-logo.png" alt="Boēthos Logo">
+      </div>
+</div>
+
+<header>
+<div class="logo">
+
+    <img src="images/lcsc-logo.png"
+         class="header-logo"
+         alt="LCSC Logo">
+
+    <div>
+        <h1>Last Chance Speed Co.</h1>
+        <p>Drive. Build. Repeat.</p>
+    </div>
+
+</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blackbox.html">Black Box</a>
+    <a href="boethos.html">Boēthos</a>
+    <a href="index.html#docs">Docs</a>
+    <a href="index.html#support">Support</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Boēthos</h2>
+    <h3>Race Engineer in a Box</h3>
+    <p>
+      Boēthos is the software side of the Black Box ecosystem, built to help drivers
+      review runs, understand data, set course gates, and improve faster.
+    </p>
+    <a class="button" href="#status">View Status</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/boethos.jpg" alt="Boēthos software screenshot">
+  </div>
+</section>
+
+<section class="about-intro">
+  <h2>Know More. Drive Better.</h2>
+  <p>
+    Boēthos is designed to turn raw data into useful feedback. The goal is not just
+    to record a run, but to help a driver understand where time was gained, where time
+    was lost, and what to focus on next.
+  </p>
+</section>
+
+<section>
+  <h2>Core Features</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Course Setup</h3>
+      <p>Set start, finish, and sector gates from the phone app before a run.</p>
+    </div>
+
+    <div class="card">
+      <h3>Run Review</h3>
+      <p>Review GPS path, speed, and movement data after each run.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sector Analysis</h3>
+      <p>Break a course into sections to compare consistency and find lost time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Driver Feedback</h3>
+      <p>Future tools will help translate data into practical driving feedback.</p>
+    </div>
+
+    <div class="card">
+      <h3>Black Box Sync</h3>
+      <p>Built to work directly with Black Box hardware and logged data files.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data Visualization</h3>
+      <p>Map overlays, speed traces, and run comparisons for driver development.</p>
+    </div>
+  </div>
+</section>
+
+<section id="status">
+  <h2>Current Development Status</h2>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <h3>Boēthos App</h3>
+      <ul>
+        <li>✓ Bluetooth connection working</li>
+        <li>✓ Start gate setup</li>
+        <li>✓ Finish gate setup</li>
+        <li>✓ Sector point setup</li>
+        <li>✓ Black Box communication</li>
+        <li>⏳ Cleaner app interface</li>
+        <li>⏳ Run review screen</li>
+      </ul>
+    </div>
+
+    <div class="status-card">
+      <h3>Boēthos Desktop / Viewer</h3>
+      <ul>
+        <li>✓ GPS map visualization</li>
+        <li>✓ Speed display</li>
+        <li>✓ Run path overlay</li>
+        <li>✓ Pan and zoom review</li>
+        <li>✓ Follow-car view</li>
+        <li>⏳ Sector timing</li>
+        <li>⏳ Driver coaching tools</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Development Photos</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="images/boethos.jpg" alt="Boēthos viewer">
+      <h3>Run Viewer</h3>
+      <p>Early Boēthos review screen showing GPS path and course data.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/blackbox.jpg" alt="Black Box hardware">
+      <h3>Black Box Integration</h3>
+      <p>Boēthos is built around data collected from Black Box hardware.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/rx7.png" alt="RX-7 test car">
+      <h3>Competition Tested</h3>
+      <p>Developed around real autocross runs and grassroots motorsport use.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Roadmap</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Phase 1</h3>
+      <p>Course setup, Bluetooth connection, GPS gates, and Black Box communication.</p>
+    </div>
+
+    <div class="card">
+      <h3>Phase 2</h3>
+      <p>Run review, sector comparison, speed overlays, and driver-focused visuals.</p>
+    </div>
+
+    <div class="card">
+      <h3>Phase 3</h3>
+      <p>Driver coaching logic, recommendations, and deeper data interpretation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="support">
+  <h2>Interested in Boēthos?</h2>
+  <p>
+    Boēthos is currently in development as part of the Black Box ecosystem.
+  </p>
+  <p>
+    <strong>Email:</strong> LastChanceSpeedCo@outlook.com
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Last Chance Speed Co. — Boēthos Development</p>
+</footer>
+
+<script>
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        document.getElementById("splash-screen")
+                .classList.add("hide-splash");
+
+    }, 1000);
+
+});
+</script>
+</body>
+</html>
