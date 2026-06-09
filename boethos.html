@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,28 +14,26 @@
 <div id="splash-screen">
   <div class="splash-content">
     <img src="images/boethos-logo.png" alt="Boēthos Logo">
-      </div>
+  </div>
 </div>
 
 <header>
-<div class="logo">
-
+  <div class="logo">
     <img src="images/lcsc-logo.png"
          class="header-logo"
          alt="LCSC Logo">
 
     <div>
-        <h1>Last Chance Speed Co.</h1>
-        <p>Drive. Build. Repeat.</p>
+      <h1>Last Chance Speed Co.</h1>
+      <p>Drive. Build. Repeat.</p>
     </div>
-
-</div>
+  </div>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="blackbox.html">Black Box</a>
     <a href="boethos.html">Boēthos</a>
-    <a href="index.html#docs">Docs</a>
+    <a href="docs.html">Docs</a>
     <a href="index.html#support">Support</a>
   </nav>
 </header>
@@ -103,55 +103,80 @@
   <h2>Current Development Status</h2>
 
   <div class="status-grid">
+
     <div class="status-card">
-      <h3>Boēthos App</h3>
+      <h3>Mobile Application</h3>
       <ul>
-        <li>✓ Bluetooth connection working</li>
+        <li>✓ Bluetooth communication operational</li>
         <li>✓ Start gate setup</li>
         <li>✓ Finish gate setup</li>
-        <li>✓ Sector point setup</li>
+        <li>✓ Sector setup</li>
         <li>✓ Black Box communication</li>
-        <li>⏳ Cleaner app interface</li>
-        <li>⏳ Run review screen</li>
+        <li>✓ Course upload workflow</li>
+        <li>⏳ User interface refinement</li>
+        <li>⏳ Run review functions</li>
       </ul>
     </div>
 
     <div class="status-card">
-      <h3>Boēthos Desktop / Viewer</h3>
+      <h3>Boēthos Viewer</h3>
       <ul>
-        <li>✓ GPS map visualization</li>
-        <li>✓ Speed display</li>
-        <li>✓ Run path overlay</li>
-        <li>✓ Pan and zoom review</li>
-        <li>✓ Follow-car view</li>
-        <li>⏳ Sector timing</li>
+        <li>✓ GPS replay visualization</li>
+        <li>✓ Unlimited zoom</li>
+        <li>✓ Multi-run overlays</li>
+        <li>✓ Follow-car mode</li>
+        <li>✓ Course mapping</li>
+        <li>✓ Speed visualization</li>
+        <li>⏳ Sector analysis</li>
         <li>⏳ Driver coaching tools</li>
       </ul>
     </div>
+
+    <div class="status-card">
+      <h3>AI Race Engineer</h3>
+      <ul>
+        <li>✓ Event detection framework</li>
+        <li>✓ Rule-based analysis</li>
+        <li>✓ Driver feedback generation</li>
+        <li>⏳ Run comparison intelligence</li>
+        <li>⏳ Time-loss analysis</li>
+        <li>⏳ Pattern recognition</li>
+        <li>⏳ Adaptive coaching systems</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 <section>
-  <h2>Development Photos</h2>
+  <h2>What Boēthos Does</h2>
 
   <div class="cards">
+
     <div class="card">
-      <img src="images/boethos.jpg" alt="Boēthos viewer">
-      <h3>Run Viewer</h3>
-      <p>Early Boēthos review screen showing GPS path and course data.</p>
+      <h3>Replay The Run</h3>
+      <p>
+        Review vehicle position, speed, and path through the course using
+        GPS-based replay tools.
+      </p>
     </div>
 
     <div class="card">
-      <img src="images/blackbox.jpg" alt="Black Box hardware">
-      <h3>Black Box Integration</h3>
-      <p>Boēthos is built around data collected from Black Box hardware.</p>
+      <h3>Compare Performance</h3>
+      <p>
+        Overlay multiple runs to identify differences in line selection,
+        speed retention, and consistency.
+      </p>
     </div>
 
     <div class="card">
-      <img src="images/rx7.png" alt="RX-7 test car">
-      <h3>Competition Tested</h3>
-      <p>Developed around real autocross runs and grassroots motorsport use.</p>
+      <h3>Find Opportunities</h3>
+      <p>
+        Use driver feedback tools and future race engineer systems to
+        identify areas for improvement.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -192,15 +217,11 @@
 
 <script>
 window.addEventListener("load", function () {
-
-    setTimeout(function () {
-
-        document.getElementById("splash-screen")
-                .classList.add("hide-splash");
-
-    }, 1000);
-
+  setTimeout(function () {
+    document.getElementById("splash-screen").classList.add("hide-splash");
+  }, 1000);
 });
 </script>
+
 </body>
 </html>
