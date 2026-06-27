@@ -1,0 +1,323 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERX-L | Last Chance Speed Co.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
+    <div>
+      <h1>Last Chance Speed Co.</h1>
+      <p>Drive. Build. Repeat.</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="erx-l.html">ERX-L</a>
+    <a href="boethos.html">Boēthos</a>
+    <a href="docs.html">Docs</a>
+    <a href="index.html#support">Support</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>ERX-L</h2>
+    <h3>Battery-Powered Motorsport Data Logger</h3>
+    <p>
+      A compact grassroots motorsport logger for GPS data, IMU movement,
+      Bluetooth setup, microSD recording, and Boēthos software analysis.
+    </p>
+    <a class="button" href="#status">View Development Status</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/erx-l.jpg" alt="ERX-L Data Logger">
+  </div>
+</section>
+
+<section class="about-intro">
+  <h2>Driver Data Without the Complication</h2>
+  <p>
+    ERX-L was created to give grassroots drivers useful data without needing
+    a professional race engineering setup. The goal is simple: record the run,
+    understand the car, and make better decisions from real information.
+  </p>
+</section>
+
+<section class="about-founder">
+  <h2>Why ERX-L Exists</h2>
+  <p>
+    Most grassroots drivers make setup changes based on feel alone. Feel matters,
+    but data helps confirm what the car actually did. ERX-L is being developed
+    around real autocross testing, real hardware limitations, and real driver needs.
+  </p>
+
+  <p>
+    It is not meant to replace the driver. It is meant to help the driver see the run
+    more clearly after the helmet comes off.
+  </p>
+</section>
+
+<section>
+  <h2>Core Features</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>GPS Run Logging</h3>
+      <p>Position, speed, course mapping, start/finish gates, and sector points.</p>
+    </div>
+
+    <div class="card">
+      <h3>IMU Movement Data</h3>
+      <p>Acceleration, braking, rotation, and movement data for run analysis.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bluetooth Setup</h3>
+      <p>Phone app connection for setup, course points, and run management.</p>
+    </div>
+
+    <div class="card">
+      <h3>microSD Recording</h3>
+      <p>Run data is recorded locally for review, storage, and future analysis.</p>
+    </div>
+
+    <div class="card">
+      <h3>Boēthos Analysis</h3>
+      <p>Built to work with the Boēthos driver review and data analysis software.</p>
+    </div>
+
+    <div class="card">
+      <h3>Battery Powered</h3>
+      <p>Internal rechargeable Li-ion power for simple installation and quick setup.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Current Hardware</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Main Controller</h3>
+      <p>
+        ESP32-S3 based development platform used for ERX-L firmware and product validation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>GPS Module</h3>
+      <p>
+        High-rate GPS receiver for position, speed, course mapping, and gate detection.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Motion Sensor</h3>
+      <p>
+        IMU sensor package for acceleration and rotational movement data.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Data Storage</h3>
+      <p>
+        microSD card logging with removable storage for post-run review and analysis.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Wireless Setup</h3>
+      <p>
+        Bluetooth communication for phone app setup and course configuration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Internal Power</h3>
+      <p>
+        Internal rechargeable Li-ion battery designed for simple portable use.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>System Specifications</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>GPS Logging</h3>
+      <p>
+        Position, speed, heading, start gate, finish gate, and sector tracking.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>IMU Logging</h3>
+      <p>
+        Lateral acceleration, longitudinal acceleration, and rotational movement recording.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>File Format</h3>
+      <p>
+        CSV-based logging compatible with Boēthos analysis software and spreadsheet tools.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Course Setup</h3>
+      <p>
+        Bluetooth transfer of start, finish, and sector locations from the companion phone app.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Status Indicators</h3>
+      <p>
+        LEDs for logging state, GPS lock, Bluetooth connection, and system status.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Simple Install</h3>
+      <p>
+        No vehicle wiring required for basic logging. Charge, mount, connect, and record.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="status">
+  <h2>Current Development Status</h2>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <h3>ERX-L Rev 1</h3>
+      <ul>
+        <li>✓ GPS logging operational</li>
+        <li>✓ IMU data operational</li>
+        <li>✓ microSD recording operational</li>
+        <li>✓ Bluetooth connection working</li>
+        <li>✓ Phone app connection working</li>
+        <li>✓ Start/finish gate testing</li>
+        <li>✓ Multiple vehicle test sessions completed</li>
+        <li>⏳ Continued field validation</li>
+      </ul>
+    </div>
+
+    <div class="status-card">
+      <h3>Product Line Roadmap</h3>
+      <ul>
+        <li>ERX-L — battery-powered logger</li>
+        <li>ERX-1 — expanded logger platform</li>
+        <li>ERX-P — professional logger platform</li>
+        <li>⏳ Boēthos software integration</li>
+        <li>⏳ Public documentation</li>
+        <li>⏳ Firmware download system</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Development Roadmap</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>ERX-L Rev 1</h3>
+      <p>
+        Prove reliable GPS, IMU, microSD logging, Bluetooth connection,
+        phone app setup, and course gate workflow.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>ERX-1</h3>
+      <p>
+        Expanded logger platform for drivers who need more system input,
+        deeper integration, and additional hardware capability.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>ERX-P</h3>
+      <p>
+        Professional logger platform planned for higher-end motorsport data,
+        expanded sensors, and deeper Boēthos integration.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Development Photos</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="images/erx-l.jpg" alt="ERX-L prototype">
+      <h3>Prototype Hardware</h3>
+      <p>Current ERX-L hardware used for testing and development.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/rx7_1.png" alt="RX-7 test car">
+      <h3>Autocross Tested</h3>
+      <p>Developed and tested through real-world competition.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/boethos.jpg" alt="Boēthos software">
+      <h3>Boēthos Integration</h3>
+      <p>Software tools for course setup, run review, and data visualization.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Documentation</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Quick Start</h3>
+      <p>Charging, GPS lock, Bluetooth connection, and first log process.</p>
+    </div>
+
+    <div class="card">
+      <h3>Setup Guide</h3>
+      <p>Mounting, app connection, course points, and logging workflow.</p>
+    </div>
+
+    <div class="card">
+      <h3>Firmware</h3>
+      <p>Firmware versions, update notes, and downloads will be added here.</p>
+    </div>
+  </div>
+</section>
+
+<section id="support">
+  <h2>Interested in ERX-L?</h2>
+  <p>
+    ERX-L is currently in development with local testing and validation as the next step.
+  </p>
+  <p><strong>Email:</strong> LastChanceSpeedCo@outlook.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Last Chance Speed Co. — ERX-L Development</p>
+</footer>
+
+</body>
+</html>
+```
