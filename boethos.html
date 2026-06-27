@@ -1,11 +1,10 @@
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Boēthos™ | Last Chance Speed Co.</title>
+  <title>Boēthos™ | Last Chance Speed Co.</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -19,9 +18,7 @@
 
 <header>
   <div class="logo">
-    <img src="images/lcsc-logo.png"
-         class="header-logo"
-         alt="LCSC Logo">
+    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
 
     <div>
       <h1>Last Chance Speed Co.</h1>
@@ -43,7 +40,7 @@
     <h2>Boēthos<sup>™</sup></h2>
     <h3>Race Engineer in a Box</h3>
     <p>
-      Boēthos is the software side of the ERX-1 ecosystem, built to help drivers
+      Boēthos is the software side of the ERX ecosystem, built to help drivers
       review runs, understand data, set course gates, and improve faster.
     </p>
     <a class="button" href="#status">View Status</a>
@@ -63,7 +60,6 @@
   </p>
 </section>
 
-```html
 <section>
   <h2>Software Preview</h2>
   <p class="section-intro">
@@ -73,9 +69,8 @@
   </p>
 
   <div class="cards">
-
     <div class="card">
-      <img src="images/overview.jpg" alt="Boēthos Overview">
+      <img src="images/overview.jpg" alt="Boēthos Overview" class="lightbox-img">
       <h3>Overview Dashboard</h3>
       <p>
         View event summaries, vehicle information, session statistics,
@@ -84,7 +79,7 @@
     </div>
 
     <div class="card">
-      <img src="images/data.jpg" alt="Boēthos Data Review">
+      <img src="images/data.jpg" alt="Boēthos Data Review" class="lightbox-img">
       <h3>Data Analysis</h3>
       <p>
         Review GPS paths, speed traces, G-forces, sensor values,
@@ -93,26 +88,56 @@
     </div>
 
     <div class="card">
-      <img src="images/boethos.jpg" alt="Boēthos Precision View">
+      <img src="images/boethos.jpg" alt="Boēthos Precision View" class="lightbox-img">
       <h3>Precision View</h3>
       <p>
         Overlay multiple runs, inspect racing lines, compare sectors,
         and visualize where time was gained or lost.
       </p>
     </div>
-
   </div>
 </section>
-```
 
- 
+<section>
+  <h2>Core Features</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Course Setup</h3>
+      <p>Set start, finish, and sector gates from the phone app before a run.</p>
+    </div>
+
+    <div class="card">
+      <h3>Run Review</h3>
+      <p>Review GPS path, speed, and movement data after each run.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sector Analysis</h3>
+      <p>Break a course into sections to compare consistency and find lost time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Driver Feedback</h3>
+      <p>Future tools will help translate data into practical driving feedback.</p>
+    </div>
+
+    <div class="card">
+      <h3>ERX Sync</h3>
+      <p>Built to work directly with ERX logger hardware and logged data files.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data Visualization</h3>
+      <p>Map overlays, speed traces, and run comparisons for driver development.</p>
+    </div>
+  </div>
 </section>
 
 <section id="status">
   <h2>Current Development Status</h2>
 
   <div class="status-grid">
-
     <div class="status-card">
       <h3>Mobile Application</h3>
       <ul>
@@ -120,7 +145,7 @@
         <li>✓ Start gate setup</li>
         <li>✓ Finish gate setup</li>
         <li>✓ Sector setup</li>
-        <li>✓ ERX-1 communication</li>
+        <li>✓ ERX communication</li>
         <li>✓ Course upload workflow</li>
         <li>⏳ User interface refinement</li>
         <li>⏳ Run review functions</li>
@@ -153,7 +178,6 @@
         <li>⏳ Adaptive coaching systems</li>
       </ul>
     </div>
-
   </div>
 </section>
 
@@ -161,7 +185,6 @@
   <h2>What Boēthos Does</h2>
 
   <div class="cards">
-
     <div class="card">
       <h3>Replay The Run</h3>
       <p>
@@ -185,7 +208,6 @@
         identify areas for improvement.
       </p>
     </div>
-
   </div>
 </section>
 
@@ -195,7 +217,7 @@
   <div class="cards">
     <div class="card">
       <h3>Phase 1</h3>
-      <p>Course setup, Bluetooth connection, GPS gates, and ERX-1 communication.</p>
+      <p>Course setup, Bluetooth connection, GPS gates, and ERX communication.</p>
     </div>
 
     <div class="card">
@@ -213,7 +235,7 @@
 <section id="support">
   <h2>Interested in Boēthos?</h2>
   <p>
-    Boēthos is currently in development as part of the ERX-1 ecosystem.
+    Boēthos is currently in development as part of the ERX ecosystem.
   </p>
   <p>
     <strong>Email:</strong> LastChanceSpeedCo@outlook.com
@@ -227,11 +249,45 @@
   </p>
 </footer>
 
+<div id="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-image" src="" alt="">
+</div>
+
 <script>
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.getElementById("splash-screen").classList.add("hide-splash");
   }, 1000);
+});
+
+const images = document.querySelectorAll(".lightbox-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const close = document.getElementById("lightbox-close");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+  });
+});
+
+close.onclick = () => {
+  lightbox.style.display = "none";
+};
+
+lightbox.onclick = (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+};
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.style.display = "none";
+  }
 });
 </script>
 
