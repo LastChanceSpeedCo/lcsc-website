@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +6,9 @@
   <title>Boēthos™ | Last Chance Speed Co.</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body class="boethos-page">
 
+<!-- SPLASH — untouched -->
 <div id="splash-screen">
   <div class="splash-content">
     <img src="images/boethos-logo.png" alt="Boēthos Logo">
@@ -17,238 +16,238 @@
 </div>
 
 <header>
-  <div class="logo">
+  <a href="index.html" class="logo">
     <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
-
     <div>
       <h1>Last Chance Speed Co.</h1>
       <p>Drive. Build. Repeat.</p>
     </div>
-  </div>
-
+  </a>
   <nav>
     <a href="index.html">Home</a>
-    <a href="erx-1.html">ERX-1</a>
-    <a href="boethos.html">Boēthos</a>
+    <a href="erx-l.html">ERX-L</a>
+    <a href="boethos.html" class="active">Boēthos</a>
     <a href="docs.html">Docs</a>
-    <a href="index.html#support">Support</a>
+    <a href="erx-l.html#early-access" class="nav-cta">Early Access</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
+    <p class="hero-eyebrow">Last Chance Speed Co.</p>
     <h2>Boēthos<sup>™</sup></h2>
     <h3>Race Engineer in a Box</h3>
     <p>
-      Boēthos is the software side of the ERX ecosystem, built to help drivers
-      review runs, understand data, set course gates, and improve faster.
+      Boēthos is the software side of the ERX ecosystem — built to help drivers review
+      runs, understand data, set course gates, and improve faster.
     </p>
-    <a class="button" href="#status">View Status</a>
+    <a class="btn btn-primary" href="#status">View Status</a>
   </div>
-
   <div class="hero-image">
-    <img src="images/boethos.jpg" alt="Boēthos software screenshot">
+    <img src="images/boethos.jpg" alt="Boēthos software">
   </div>
 </section>
 
-<section class="about-intro">
-  <h2>Know More. Drive Better.</h2>
-  <p>
-    Boēthos is designed to turn raw data into useful feedback. The goal is not just
-    to record a run, but to help a driver understand where time was gained, where time
-    was lost, and what to focus on next.
-  </p>
+<div class="divider"></div>
+
+<!-- WHAT IT DOES -->
+<section>
+  <div class="about-split">
+    <div class="left">
+      <p class="section-label">The Purpose</p>
+      <h2>Know more. Drive better.</h2>
+    </div>
+    <div class="right">
+      <p>
+        Boēthos turns raw data into useful feedback. The goal is not just to record a run,
+        but to help a driver understand where time was gained, where time was lost,
+        and what to focus on next.
+      </p>
+      <p>
+        Built to work directly with ERX hardware — load a run, review the data,
+        compare to your previous best.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>Software Preview</h2>
-  <p class="section-intro">
-    Boēthos transforms raw ERX logger data into clear visual feedback, helping
-    drivers understand every run, compare performance, and make smarter setup
-    and driving decisions.
-  </p>
+<div class="divider"></div>
 
+<!-- SOFTWARE PREVIEW -->
+<section>
+  <p class="section-label">Software Preview</p>
+  <h2>What You'll See</h2>
+  <p class="section-intro">
+    Boēthos transforms raw ERX logger data into clear visual feedback — every run,
+    every sector, every decision point.
+  </p>
   <div class="cards">
     <div class="card">
       <img src="images/overview.jpg" alt="Boēthos Overview" class="lightbox-img">
       <h3>Overview Dashboard</h3>
-      <p>
-        View event summaries, vehicle information, session statistics,
-        and key performance metrics in one place.
-      </p>
+      <p>Event summaries, session statistics, and key performance metrics in one place.</p>
     </div>
-
     <div class="card">
       <img src="images/data.jpg" alt="Boēthos Data Review" class="lightbox-img">
       <h3>Data Analysis</h3>
-      <p>
-        Review GPS paths, speed traces, G-forces, sensor values,
-        and logged events from every run.
-      </p>
+      <p>GPS paths, speed traces, G-forces, and logged events from every run.</p>
     </div>
-
     <div class="card">
       <img src="images/boethos.jpg" alt="Boēthos Precision View" class="lightbox-img">
       <h3>Precision View</h3>
-      <p>
-        Overlay multiple runs, inspect racing lines, compare sectors,
-        and visualize where time was gained or lost.
-      </p>
+      <p>Overlay multiple runs, inspect racing lines, and visualize where time was gained or lost.</p>
     </div>
   </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- FEATURES -->
 <section>
+  <p class="section-label">Capabilities</p>
   <h2>Core Features</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Course Setup</h3>
-      <p>Set start, finish, and sector gates from the phone app before a run.</p>
+  <div class="feature-group">
+    <p class="feature-group-label">Session Tools</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Course Setup</h3>
+        <p>Set start, finish, and sector gates from the phone app before a run.</p>
+      </div>
+      <div class="card">
+        <h3>Run Review</h3>
+        <p>GPS path, speed, and movement data reviewed immediately after each run.</p>
+      </div>
+      <div class="card">
+        <h3>Sector Analysis</h3>
+        <p>Break a course into sections to compare consistency and isolate lost time.</p>
+      </div>
     </div>
+  </div>
 
-    <div class="card">
-      <h3>Run Review</h3>
-      <p>Review GPS path, speed, and movement data after each run.</p>
-    </div>
-
-    <div class="card">
-      <h3>Sector Analysis</h3>
-      <p>Break a course into sections to compare consistency and find lost time.</p>
-    </div>
-
-    <div class="card">
-      <h3>Driver Feedback</h3>
-      <p>Future tools will help translate data into practical driving feedback.</p>
-    </div>
-
-    <div class="card">
-      <h3>ERX Sync</h3>
-      <p>Built to work directly with ERX logger hardware and logged data files.</p>
-    </div>
-
-    <div class="card">
-      <h3>Data Visualization</h3>
-      <p>Map overlays, speed traces, and run comparisons for driver development.</p>
+  <div class="feature-group">
+    <p class="feature-group-label">Analysis</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Data Visualization</h3>
+        <p>Map overlays, speed traces, and run comparisons for driver development.</p>
+      </div>
+      <div class="card">
+        <h3>ERX Sync</h3>
+        <p>Native integration with ERX logger hardware and CSV log files.</p>
+      </div>
+      <div class="card">
+        <h3>Driver Feedback</h3>
+        <p>Coaching tools that translate data into practical, actionable feedback.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="status">
-  <h2>Current Development Status</h2>
+<div class="divider"></div>
 
-  <div class="status-grid">
+<!-- STATUS -->
+<section id="status">
+  <p class="section-label">Development</p>
+  <h2>Status</h2>
+  <div class="status-grid three-col">
     <div class="status-card">
-      <h3>Mobile Application</h3>
+      <h3>Mobile App</h3>
       <ul>
-        <li>✓ Bluetooth communication operational</li>
-        <li>✓ Start gate setup</li>
-        <li>✓ Finish gate setup</li>
-        <li>✓ Sector setup</li>
-        <li>✓ ERX communication</li>
-        <li>✓ Course upload workflow</li>
-        <li>⏳ User interface refinement</li>
-        <li>⏳ Run review functions</li>
+        <li><span class="dot dot-done"></span>Bluetooth communication</li>
+        <li><span class="dot dot-done"></span>Start gate setup</li>
+        <li><span class="dot dot-done"></span>Finish gate setup</li>
+        <li><span class="dot dot-done"></span>Sector setup</li>
+        <li><span class="dot dot-done"></span>ERX communication</li>
+        <li><span class="dot dot-done"></span>Course upload workflow</li>
+        <li><span class="dot dot-active"></span>UI refinement</li>
+        <li><span class="dot dot-active"></span>Run review functions</li>
       </ul>
     </div>
-
     <div class="status-card">
       <h3>Boēthos Viewer</h3>
       <ul>
-        <li>✓ GPS replay visualization</li>
-        <li>✓ Unlimited zoom</li>
-        <li>✓ Multi-run overlays</li>
-        <li>✓ Follow-car mode</li>
-        <li>✓ Course mapping</li>
-        <li>✓ Speed visualization</li>
-        <li>⏳ Sector analysis</li>
-        <li>⏳ Driver coaching tools</li>
+        <li><span class="dot dot-done"></span>GPS replay visualization</li>
+        <li><span class="dot dot-done"></span>Unlimited zoom</li>
+        <li><span class="dot dot-done"></span>Multi-run overlays</li>
+        <li><span class="dot dot-done"></span>Follow-car mode</li>
+        <li><span class="dot dot-done"></span>Course mapping</li>
+        <li><span class="dot dot-done"></span>Speed visualization</li>
+        <li><span class="dot dot-active"></span>Sector analysis</li>
+        <li><span class="dot dot-future"></span>Driver coaching tools</li>
       </ul>
     </div>
-
     <div class="status-card">
       <h3>AI Race Engineer</h3>
       <ul>
-        <li>✓ Event detection framework</li>
-        <li>✓ Rule-based analysis</li>
-        <li>✓ Driver feedback generation</li>
-        <li>⏳ Run comparison intelligence</li>
-        <li>⏳ Time-loss analysis</li>
-        <li>⏳ Pattern recognition</li>
-        <li>⏳ Adaptive coaching systems</li>
+        <li><span class="dot dot-done"></span>Event detection framework</li>
+        <li><span class="dot dot-done"></span>Rule-based analysis</li>
+        <li><span class="dot dot-done"></span>Driver feedback generation</li>
+        <li><span class="dot dot-active"></span>Run comparison intelligence</li>
+        <li><span class="dot dot-future"></span>Time-loss analysis</li>
+        <li><span class="dot dot-future"></span>Pattern recognition</li>
+        <li><span class="dot dot-future"></span>Adaptive coaching</li>
       </ul>
     </div>
   </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- ROADMAP -->
 <section>
-  <h2>What Boēthos Does</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Replay The Run</h3>
-      <p>
-        Review vehicle position, speed, and path through the course using
-        GPS-based replay tools.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Compare Performance</h3>
-      <p>
-        Overlay multiple runs to identify differences in line selection,
-        speed retention, and consistency.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Find Opportunities</h3>
-      <p>
-        Use driver feedback tools and future race engineer systems to
-        identify areas for improvement.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Roadmap</h2>
-
-  <div class="cards">
-    <div class="card">
+  <p class="section-label">Roadmap</p>
+  <h2>What's Coming</h2>
+  <div class="roadmap-row">
+    <div class="roadmap-item active">
+      <span class="roadmap-badge badge-now">Now</span>
       <h3>Phase 1</h3>
       <p>Course setup, Bluetooth connection, GPS gates, and ERX communication.</p>
     </div>
-
-    <div class="card">
+    <div class="roadmap-item">
+      <span class="roadmap-badge badge-next">Next</span>
       <h3>Phase 2</h3>
       <p>Run review, sector comparison, speed overlays, and driver-focused visuals.</p>
     </div>
-
-    <div class="card">
+    <div class="roadmap-item">
+      <span class="roadmap-badge badge-future">Future</span>
       <h3>Phase 3</h3>
-      <p>Driver coaching logic, recommendations, and deeper data interpretation.</p>
+      <p>Driver coaching logic, AI recommendations, and deeper data interpretation.</p>
     </div>
   </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- CONTACT -->
 <section id="support">
-  <h2>Interested in Boēthos?</h2>
-  <p>
-    Boēthos is currently in development as part of the ERX ecosystem.
-  </p>
-  <p>
-    <strong>Email:</strong> LastChanceSpeedCo@outlook.com
-  </p>
+  <div class="about-split">
+    <div class="left">
+      <p class="section-label">Contact</p>
+      <h2>Interested in Boēthos?</h2>
+    </div>
+    <div class="right">
+      <p>Boēthos is in active development as part of the ERX ecosystem.</p>
+      <div class="contact-block">
+        <span class="contact-label">Email</span>
+        <a href="mailto:LastChanceSpeedCo@outlook.com">LastChanceSpeedCo@outlook.com</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Last Chance Speed Co. — Boēthos Development</p>
-  <p class="trademark-line">
-    Boēthos™ and the Boēthos logo are trademarks of Last Chance Speed Co.
-  </p>
+  <img src="images/lcsc-logo.png" class="footer-logo" alt="LCSC Logo">
+  <p>© 2026 Last Chance Speed Co. — Boēthos™ is a trademark of Last Chance Speed Co.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="erx-l.html">ERX-L</a>
+    <a href="docs.html">Docs</a>
+  </div>
 </footer>
 
+<!-- LIGHTBOX — untouched -->
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
   <img id="lightbox-image" src="" alt="">
@@ -274,21 +273,9 @@ images.forEach(img => {
   });
 });
 
-close.onclick = () => {
-  lightbox.style.display = "none";
-};
-
-lightbox.onclick = (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
-  }
-};
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    lightbox.style.display = "none";
-  }
-});
+close.onclick = () => { lightbox.style.display = "none"; };
+lightbox.onclick = (e) => { if (e.target === lightbox) lightbox.style.display = "none"; };
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") lightbox.style.display = "none"; });
 </script>
 
 </body>

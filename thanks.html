@@ -1,121 +1,108 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Received | Last Chance Speed Co.</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Received | Last Chance Speed Co.</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <img src="images/lcsc-logo.png"
-             class="header-logo"
-             alt="LCSC Logo">
-
-        <div>
-            <h1>Last Chance Speed Co.</h1>
-            <p>Drive. Build. Repeat.</p>
-        </div>
+  <a href="index.html" class="logo">
+    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
+    <div>
+      <h1>Last Chance Speed Co.</h1>
+      <p>Drive. Build. Repeat.</p>
     </div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="erx-l.html">ERX-L</a>
-        <a href="boethos.html">Boēthos</a>
-        <a href="docs.html">Docs</a>
-    </nav>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="erx-l.html">ERX-L</a>
+    <a href="boethos.html">Boēthos</a>
+    <a href="docs.html">Docs</a>
+  </nav>
 </header>
 
-<section class="hero">
-
-    <div class="hero-text">
-
-        <h2>Application Received</h2>
-
-        <h3>Thank You for Applying!</h3>
-
-        <p>
-            Your ERX-L Beta Program application has been successfully
-            submitted.
-        </p>
-
-        <p>
-            Every application is personally reviewed to ensure the initial
-            beta program includes a variety of vehicles, driving experience,
-            and motorsport disciplines.
-        </p>
-
-        <a class="button" href="index.html">
-            Return Home
-        </a>
-
-    </div>
-
+<section class="hero" style="grid-template-columns: 1fr; max-width: 760px;">
+  <div class="hero-text">
+    <p class="hero-eyebrow" style="color: var(--green);">Submitted</p>
+    <h2>Application Received</h2>
+    <h3>We'll be in touch.</h3>
+    <p>
+      Your ERX-L early access application has been submitted. Every application is
+      personally reviewed to ensure the initial group includes a variety of vehicles,
+      experience levels, and disciplines.
+    </p>
+    <a class="btn btn-secondary" href="index.html">Return Home</a>
+  </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- NEXT STEPS -->
 <section>
-
-    <h2>What Happens Next?</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Application Review</h3>
-            <p>
-                I'll review your vehicle, motorsport experience, and how you
-                plan to use ERX-L during testing.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Personal Follow-Up</h3>
-            <p>
-                If your application is selected, I'll contact you directly by
-                email to discuss your setup, answer questions, and make sure
-                ERX-L is a good fit.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Private Purchase Code</h3>
-            <p>
-                Approved beta testers will receive a private purchase code that
-                unlocks the ERX-L Beta product in the Last Chance Speed Co.
-                online store.
-            </p>
-        </div>
-
+  <p class="section-label">What Happens Next</p>
+  <h2>The process</h2>
+  <div class="thanks-steps">
+    <div class="thanks-step">
+      <span class="step-number">01</span>
+      <h3>Application Review</h3>
+      <p>
+        Vehicle, motorsport experience, and planned use are reviewed to find
+        the right fit for the initial beta group.
+      </p>
     </div>
-
+    <div class="thanks-step">
+      <span class="step-number">02</span>
+      <h3>Personal Follow-Up</h3>
+      <p>
+        If selected, you'll be contacted directly by email to discuss your setup,
+        answer questions, and confirm ERX-L is a good match.
+      </p>
+    </div>
+    <div class="thanks-step">
+      <span class="step-number">03</span>
+      <h3>Purchase Code</h3>
+      <p>
+        Approved testers receive a private purchase code that unlocks the ERX-L
+        unit in the Last Chance Speed Co. online store.
+      </p>
+    </div>
+  </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- ABOUT PROGRAM -->
 <section>
-
-    <h2>About the Beta Program</h2>
-
-    <p>
-        The current beta program is intentionally limited to a small group of
-        drivers. This allows new firmware, hardware revisions, and Boēthos
-        software updates to be validated through real-world motorsport use
-        while maintaining direct communication with every tester.
-    </p>
-
-    <p>
-        Thank you for helping build the future of grassroots motorsport data
-        analysis.
-    </p>
-
+  <div class="about-split">
+    <div class="left">
+      <p class="section-label">About the Program</p>
+      <h2>Why it's limited</h2>
+    </div>
+    <div class="right">
+      <p>
+        The current early access program is intentionally small. This allows firmware,
+        hardware revisions, and Boēthos software updates to be validated through real
+        competition while maintaining direct communication with every tester.
+      </p>
+      <p>
+        Thank you for helping push ERX-L forward.
+      </p>
+    </div>
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 Last Chance Speed Co.</p>
+  <img src="images/lcsc-logo.png" class="footer-logo" alt="LCSC Logo">
+  <p>© 2026 Last Chance Speed Co.</p>
+  <div class="footer-links">
+    <a href="erx-l.html">ERX-L</a>
+    <a href="boethos.html">Boēthos</a>
+    <a href="docs.html">Docs</a>
+  </div>
 </footer>
 
 </body>
 </html>
-```
