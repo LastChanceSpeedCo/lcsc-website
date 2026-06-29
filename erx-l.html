@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERX-L | Last Chance Speed Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0d0d;
+      --surface:   #161616;
+      --surface2:  #1e1e1e;
+      --border:    #2a2a2a;
+      --text:      #e8e8e8;
+      --muted:     #888;
+      --accent:    #c0392b;
+      --accent-h:  #a93226;
+      --green:     #27ae60;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .header-logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .logo-text h1 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .logo-text p {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    nav a.nav-cta {
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    nav a.nav-cta:hover {
+      border-color: var(--muted);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 40px;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .hero-text h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: clamp(42px, 6vw, 64px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .hero-text h3 {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 24px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-text p {
+      font-size: 15px;
+      color: #aaa;
+      margin-bottom: 36px;
+      max-width: 440px;
+      line-height: 1.7;
+    }
+
+    .hero-specs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 36px;
+    }
+
+    .hero-spec {
+      background: var(--surface);
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .hero-spec .val {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+    }
+
+    .hero-spec .lbl {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.15s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--accent-h); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover { border-color: var(--muted); }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .hero-image .img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    section h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    section > p {
+      color: #aaa;
+      max-width: 620px;
+      margin-bottom: 12px;
+      line-height: 1.75;
+    }
+
+    /* ── ABOUT SPLIT ── */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-split .right p {
+      color: #aaa;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    /* ── FEATURE GRID ── */
+    .feature-group {
+      margin-top: 56px;
+    }
+
+    .feature-group + .feature-group {
+      margin-top: 48px;
+    }
+
+    .feature-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 28px;
+      transition: background 0.15s;
+    }
+
+    .card:hover { background: var(--surface2); }
+
+    .card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── SPECS TABLE ── */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    .specs-table th {
+      text-align: left;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .specs-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #aaa;
+      vertical-align: top;
+    }
+
+    .specs-table td:first-child {
+      font-weight: 500;
+      color: var(--text);
+      white-space: nowrap;
+      width: 200px;
+    }
+
+    .specs-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .specs-table tbody tr:hover td {
+      background: var(--surface2);
+    }
+
+    /* ── STATUS SECTION ── */
+    .status-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .status-card {
+      background: var(--surface);
+      padding: 32px;
+    }
+
+    .status-card h3 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .status-card ul {
+      list-style: none;
+    }
+
+    .status-card ul li {
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status-card ul li:last-child { border-bottom: none; }
+
+    .status-card ul li .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-done   { background: var(--green); }
+    .dot-active { background: #e6a817; }
+    .dot-future { background: var(--border); }
+
+    /* ── ROADMAP ── */
+    .roadmap-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .roadmap-item {
+      background: var(--surface);
+      padding: 28px;
+    }
+
+    .roadmap-item.active {
+      background: var(--surface2);
+    }
+
+    .roadmap-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 12px;
+    }
+
+    .badge-now  { background: rgba(39,174,96,0.15); color: var(--green); border: 1px solid rgba(39,174,96,0.3); }
+    .badge-next { background: rgba(230,168,23,0.12); color: #e6a817; border: 1px solid rgba(230,168,23,0.25); }
+    .badge-future { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+
+    .roadmap-item h3 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .roadmap-item p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── PHOTO GRID ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .photo-card {
+      background: var(--surface);
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--border);
+      font-size: 24px;
+    }
+
+    .photo-card .caption {
+      padding: 16px 20px;
+    }
+
+    .photo-card .caption h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .photo-card .caption p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── DOCS ── */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .doc-card {
+      background: var(--surface);
+      padding: 28px;
+      text-decoration: none;
+      transition: background 0.15s;
+      display: block;
+    }
+
+    .doc-card:hover { background: var(--surface2); }
+
+    .doc-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .doc-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── BETA FORM SECTION ── */
+    .beta-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .beta-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .beta-info h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .beta-info p {
+      color: #aaa;
+      line-height: 1.75;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .beta-detail {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .beta-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .beta-detail-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 11px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      transition: border-color 0.15s;
+      outline: none;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--muted);
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+      color: #555;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    form button.btn {
+      align-self: flex-start;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      header { padding: 0 20px; }
+      nav { gap: 16px; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 40px;
+      }
+
+      .hero-image { order: -1; }
+
+      section { padding: 60px 20px; }
+
+      .about-split,
+      .status-grid,
+      .roadmap-row,
+      .beta-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      .cards,
+      .photo-grid,
+      .doc-grid { grid-template-columns: 1fr; }
+
+      .hero-specs { grid-template-columns: repeat(3, 1fr); }
+
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo">
+    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
+    <div class="logo-text">
+      <h1>Last Chance Speed Co.</h1>
+      <p>Drive. Build. Repeat.</p>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="erx-l.html">ERX-L</a>
+    <a href="boethos.html">Boēthos</a>
+    <a href="docs.html">Docs</a>
+    <a href="#early-access" class="nav-cta">Early Access</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Last Chance Speed Co.</p>
+    <h2>ERX-L</h2>
+    <h3>Battery-Powered Motorsport Data Logger</h3>
+    <p>
+      Know what your car did after the helmet comes off. ERX-L records GPS,
+      acceleration, and rotation data so you can review every run and make
+      decisions based on what actually happened.
+    </p>
+    <div class="hero-specs">
+      <div class="hero-spec">
+        <span class="val">GPS</span>
+        <span class="lbl">High-Rate</span>
+      </div>
+      <div class="hero-spec">
+        <span class="val">6-DOF</span>
+        <span class="lbl">IMU</span>
+      </div>
+      <div class="hero-spec">
+        <span class="val">CSV</span>
+        <span class="lbl">Log Format</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#early-access">Apply for Early Access</a>
+      <a class="btn btn-secondary" href="#status">View Status</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/erx-l.jpg" alt="ERX-L Data Logger">
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY -->
+<section>
+  <div class="about-split">
+    <div class="left">
+      <p class="section-label">The Problem</p>
+      <h2>Most drivers are guessing</h2>
+    </div>
+    <div class="right">
+      <p>
+        Setup changes based on feel alone are hard to repeat and hard to evaluate.
+        ERX-L gives you the data to confirm what the car actually did — corner speeds,
+        lateral load, braking points — so your adjustments are grounded in what happened,
+        not just what it felt like.
+      </p>
+      <p>
+        It is not meant to replace the driver. It is meant to help the driver
+        see the run more clearly after the helmet comes off.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section>
+  <p class="section-label">Capabilities</p>
+  <h2>What ERX-L Records</h2>
+
+  <div class="feature-group">
+    <p class="feature-group-label">Data Capture</p>
+    <div class="cards">
+      <div class="card">
+        <h3>GPS Run Logging</h3>
+        <p>Position, speed, heading, start/finish gates, and sector points recorded each run.</p>
+      </div>
+      <div class="card">
+        <h3>IMU Movement</h3>
+        <p>Lateral acceleration, longitudinal acceleration, and rotational data at every moment.</p>
+      </div>
+      <div class="card">
+        <h3>microSD Storage</h3>
+        <p>All data written locally to removable storage — no cloud dependency, no data loss.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-group">
+    <p class="feature-group-label">Setup &amp; Integration</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Bluetooth Setup</h3>
+        <p>Connect via phone app to configure course points, gates, and run management.</p>
+      </div>
+      <div class="card">
+        <h3>Boēthos Analysis</h3>
+        <p>Native integration with Boēthos software for run review and data visualization.</p>
+      </div>
+      <div class="card">
+        <h3>No Wiring Required</h3>
+        <p>Internal Li-ion battery. Charge, mount, connect, and record. Done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SPECIFICATIONS -->
+<section>
+  <p class="section-label">Specifications</p>
+  <h2>Hardware &amp; System</h2>
+  <table class="specs-table">
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Main Controller</td>
+        <td>ESP32-S3 based platform for firmware and field validation</td>
+      </tr>
+      <tr>
+        <td>GPS Module</td>
+        <td>High-rate receiver — position, speed, course mapping, gate detection</td>
+      </tr>
+      <tr>
+        <td>Motion Sensor</td>
+        <td>6-axis IMU — lateral acceleration, longitudinal acceleration, rotation</td>
+      </tr>
+      <tr>
+        <td>Data Storage</td>
+        <td>microSD card, removable, CSV format compatible with Boēthos and spreadsheet tools</td>
+      </tr>
+      <tr>
+        <td>Wireless</td>
+        <td>Bluetooth — phone app for course setup and configuration</td>
+      </tr>
+      <tr>
+        <td>Power</td>
+        <td>Internal rechargeable Li-ion — no vehicle wiring required</td>
+      </tr>
+      <tr>
+        <td>Status Indicators</td>
+        <td>LEDs for GPS lock, Bluetooth, logging state, and system status</td>
+      </tr>
+      <tr>
+        <td>Log Format</td>
+        <td>CSV — open format, readable without proprietary software</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="divider"></div>
+
+<!-- STATUS -->
+<section id="status">
+  <p class="section-label">Development</p>
+  <h2>Status &amp; Roadmap</h2>
+  <div class="status-grid">
+    <div class="status-card">
+      <h3>ERX-L Rev 1 — Current</h3>
+      <ul>
+        <li><span class="dot dot-done"></span>GPS logging operational</li>
+        <li><span class="dot dot-done"></span>IMU data operational</li>
+        <li><span class="dot dot-done"></span>microSD recording operational</li>
+        <li><span class="dot dot-done"></span>Bluetooth connection working</li>
+        <li><span class="dot dot-done"></span>Phone app connection working</li>
+        <li><span class="dot dot-done"></span>Start/finish gate testing complete</li>
+        <li><span class="dot dot-done"></span>Multiple competition events completed</li>
+        <li><span class="dot dot-done"></span>Three beta units assembled</li>
+        <li><span class="dot dot-active"></span>Beta tester selection in progress</li>
+        <li><span class="dot dot-active"></span>Continued field validation</li>
+      </ul>
+    </div>
+    <div class="status-card">
+      <h3>Product Line</h3>
+      <ul>
+        <li><span class="dot dot-done"></span>ERX-L — battery-powered logger</li>
+        <li><span class="dot dot-active"></span>Boēthos software integration</li>
+        <li><span class="dot dot-active"></span>Public documentation</li>
+        <li><span class="dot dot-active"></span>Firmware download system</li>
+        <li><span class="dot dot-future"></span>ERX-1 — expanded logger platform</li>
+        <li><span class="dot dot-future"></span>ERX-P — professional logger platform</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="roadmap-row">
+    <div class="roadmap-item active">
+      <span class="roadmap-badge badge-now">Now</span>
+      <h3>ERX-L Rev 1</h3>
+      <p>GPS, IMU, microSD logging, Bluetooth connection, phone app setup, and course gate workflow proven in competition.</p>
+    </div>
+    <div class="roadmap-item">
+      <span class="roadmap-badge badge-next">Next</span>
+      <h3>ERX-1</h3>
+      <p>Expanded logger platform for drivers who need more system inputs, deeper integration, and additional hardware capability.</p>
+    </div>
+    <div class="roadmap-item">
+      <span class="roadmap-badge badge-future">Future</span>
+      <h3>ERX-P</h3>
+      <p>Professional platform with expanded sensors, higher-resolution logging, and deep Boēthos integration.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HARDWARE PHOTOS -->
+<section>
+  <p class="section-label">Hardware</p>
+  <h2>Built &amp; Tested</h2>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <img src="images/erx-l.jpg" alt="ERX-L hardware">
+      <div class="caption">
+        <h3>ERX-L Unit</h3>
+        <p>Rev 1 hardware used in testing and competition.</p>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/rx7_1.png" alt="Test vehicle">
+      <div class="caption">
+        <h3>Autocross Tested</h3>
+        <p>Developed and validated through real competition events.</p>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/boethos.jpg" alt="Boēthos software">
+      <div class="caption">
+        <h3>Boēthos Integration</h3>
+        <p>Course setup, run review, and data visualization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DOCS -->
+<section>
+  <p class="section-label">Documentation</p>
+  <h2>Get Started</h2>
+  <div class="doc-grid">
+    <a href="docs.html#quickstart" class="doc-card">
+      <h3>Quick Start</h3>
+      <p>Charging, GPS lock, Bluetooth connection, and first log process.</p>
+    </a>
+    <a href="docs.html#setup" class="doc-card">
+      <h3>Setup Guide</h3>
+      <p>Mounting, app connection, course points, and logging workflow.</p>
+    </a>
+    <a href="docs.html#firmware" class="doc-card">
+      <h3>Firmware</h3>
+      <p>Versions, release notes, and downloads.</p>
+    </a>
+  </div>
+</section>
+
+<!-- EARLY ACCESS FORM -->
+<div class="beta-section" id="early-access">
+  <div class="beta-inner">
+    <div class="beta-info">
+      <p class="section-label">Early Access</p>
+      <h2>Three units available</h2>
+      <p>
+        ERX-L beta units are reserved for experienced motorsport drivers who
+        can put the hardware through real competition and provide direct feedback.
+      </p>
+      <p>
+        Approved applicants receive a private purchase code after a brief
+        conversation about their vehicle, events, and intended use.
+      </p>
+      <div class="beta-detail">
+        <div class="beta-detail-item">Real competition use required — autocross, track days, rally</div>
+        <div class="beta-detail-item">Direct feedback on hardware and software during validation</div>
+        <div class="beta-detail-item">Private purchase code provided after approval</div>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/LastChanceSpeedCo@outlook.com" method="POST">
+      <div class="form-row">
+        <input type="text" name="Name" placeholder="Full Name" required>
+        <input type="email" name="Email" placeholder="Email Address" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="Location" placeholder="City / State">
+        <input type="text" name="Vehicle" placeholder="Vehicle">
+      </div>
+      <input type="text" name="Motorsport" placeholder="Discipline — autocross, track day, rally, etc.">
+      <textarea
+        name="Message"
+        rows="5"
+        placeholder="Tell us about your car, your experience level, and how you plan to use ERX-L."
+        required></textarea>
+      <button class="btn btn-primary" type="submit">Request Early Access</button>
+      <input type="hidden" name="_subject" value="New ERX-L Beta Application">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.lastchancespeedco.com/thanks.html">
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Last Chance Speed Co. — ERX-L</p>
+</footer>
+
+</body>
+</html>
