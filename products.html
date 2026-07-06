@@ -3,489 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products — Last Chance Speed Co.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0a0c10;
-      --bg-raised: #10131a;
-      --panel: #131720;
-      --panel-border: #232a3a;
-      --text: #eef1f5;
-      --text-dim: #8d97a8;
-      --accent: #e63946;
-      --accent-dim: #7a2027;
-      --amber: #f2a72e;
-      --green: #3ddc84;
-      --radius: 8px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-
-    h1, h2, h3, .display {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-    }
-
-    .mono {
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    header.site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding: 22px 40px 18px;
-      background: var(--bg-raised);
-      border-bottom: 2px solid var(--accent);
-    }
-
-    header.site-header a.brand {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    header.site-header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
-    header.site-header .eyebrow {
-      margin: 2px 0 0;
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--text-dim);
-      font-family: 'JetBrains Mono', monospace;
-      text-transform: uppercase;
-    }
-
-    header.site-header .status {
-      text-align: right;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-
-    header.site-header .status .dot {
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      margin-right: 6px;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.35; }
-    }
-
-    nav.main-nav {
-      background: #08090c;
-      padding: 12px 40px;
-      display: flex;
-      gap: 28px;
-    }
-
-    nav.main-nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
-    }
-
-    nav.main-nav a:hover { border-color: var(--accent); }
-
-    .subnav {
-      background: var(--bg-raised);
-      padding: 14px 40px;
-      border-bottom: 1px solid var(--panel-border);
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .subnav a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
-      font-family: 'JetBrains Mono', monospace;
-      padding: 8px 16px;
-      border-radius: 20px;
-      border: 1px solid var(--panel-border);
-    }
-
-    .subnav a:hover { color: var(--text); border-color: var(--accent); }
-
-    .subnav a.active {
-      color: #fff;
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .hero {
-      position: relative;
-      padding: 70px 40px;
-      background: radial-gradient(ellipse at 80% 20%, #1a1f2b 0%, var(--bg) 60%);
-      overflow: hidden;
-      border-bottom: 1px solid var(--panel-border);
-    }
-
-    .hero-inner {
-      max-width: 640px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h2 {
-      font-size: 44px;
-      line-height: 1.05;
-      margin: 0 0 14px;
-    }
-
-    .hero.small h2 { font-size: 34px; }
-
-    .hero p {
-      font-size: 17px;
-      color: var(--text-dim);
-      max-width: 620px;
-      margin: 0 0 26px;
-    }
-
-    .trace {
-      position: absolute;
-      right: -40px;
-      top: 0;
-      bottom: 0;
-      width: 60%;
-      max-width: 640px;
-      opacity: 0.9;
-      z-index: 1;
-    }
-
-    .trace path.line {
-      fill: none;
-      stroke: var(--accent);
-      stroke-width: 2;
-      stroke-dasharray: 1400;
-      stroke-dashoffset: 1400;
-      animation: draw 3.5s ease-out forwards;
-    }
-
-    .trace path.line.alt {
-      stroke: var(--green);
-      opacity: 0.5;
-      animation-delay: 0.3s;
-    }
-
-    @keyframes draw {
-      to { stroke-dashoffset: 0; }
-    }
-
-    .telemetry-readout {
-      display: flex;
-      gap: 30px;
-      margin-top: 4px;
-    }
-
-    .telemetry-readout div {
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .telemetry-readout .label {
-      font-size: 11px;
-      color: var(--text-dim);
-      letter-spacing: 1px;
-    }
-
-    .telemetry-readout .value {
-      font-size: 20px;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .telemetry-readout .value.accent { color: var(--accent); }
-    .telemetry-readout .value.green { color: var(--green); }
-
-    .button {
-      display: inline-block;
-      margin-top: 6px;
-      margin-right: 12px;
-      padding: 13px 24px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--radius);
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      font-size: 14px;
-      border: 1px solid var(--accent);
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--panel-border);
-    }
-
-    .button.secondary:hover { border-color: var(--accent); }
-
-    section {
-      padding: 55px 40px;
-      max-width: 1140px;
-      margin: auto;
-    }
-
-    section > h2 {
-      font-size: 26px;
-      margin-bottom: 6px;
-    }
-
-    section > .section-sub {
-      color: var(--text-dim);
-      max-width: 640px;
-      margin: 0 0 30px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--panel);
-      padding: 24px;
-      border-radius: var(--radius);
-      border: 1px solid var(--panel-border);
-      transition: border-color 0.15s;
-    }
-
-    .card:hover { border-color: var(--accent-dim); }
-
-    .card h3 {
-      margin: 6px 0 8px;
-      font-size: 20px;
-    }
-
-    .card p { color: var(--text-dim); margin: 0 0 12px; }
-
-    .card ul {
-      color: var(--text-dim);
-      padding-left: 18px;
-      margin: 12px 0;
-      font-size: 14px;
-    }
-
-    .card ul li { margin-bottom: 4px; }
-
-    .tag {
-      display: inline-block;
-      padding: 3px 9px;
-      background: var(--bg-raised);
-      color: var(--text-dim);
-      border: 1px solid var(--panel-border);
-      border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .tag.live { color: var(--green); border-color: var(--green); }
-    .tag.dev { color: var(--amber); border-color: var(--amber); }
-
-    .beta-section {
-      background: linear-gradient(135deg, #171214, #0d0f14);
-      border-top: 1px solid var(--panel-border);
-      border-bottom: 1px solid var(--panel-border);
-    }
-
-    .beta-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    @media (max-width: 780px) {
-      .beta-grid { grid-template-columns: 1fr; }
-      .trace { display: none; }
-      .hero h2 { font-size: 32px; }
-    }
-
-    .beta-copy h2 { font-size: 28px; margin-bottom: 10px; }
-    .beta-copy p { color: var(--text-dim); }
-
-    .beta-copy ul {
-      color: var(--text-dim);
-      padding-left: 18px;
-      margin: 18px 0;
-    }
-    .beta-copy ul li { margin-bottom: 6px; }
-
-    form.beta-form {
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: var(--radius);
-      padding: 26px;
-    }
-
-    form.beta-form label {
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin: 14px 0 6px;
-    }
-
-    form.beta-form label:first-child { margin-top: 0; }
-
-    form.beta-form input,
-    form.beta-form select,
-    form.beta-form textarea {
-      width: 100%;
-      background: var(--bg-raised);
-      border: 1px solid var(--panel-border);
-      border-radius: 6px;
-      color: var(--text);
-      padding: 10px 12px;
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-    }
-
-    form.beta-form textarea { resize: vertical; min-height: 70px; }
-
-    form.beta-form input:focus,
-    form.beta-form select:focus,
-    form.beta-form textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    form.beta-form button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 13px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    form.beta-form button:hover { background: #d12d3a; }
-
-    .form-note {
-      font-size: 12px;
-      color: var(--text-dim);
-      margin-top: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #08090c;
-      color: var(--text-dim);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-    }
-  </style>
+  <title>Products | Last Chance Speed Co.</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <header class="site-header">
-    <a class="brand" href="index.html">
+<header>
+  <div class="logo">
+    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
+    <div>
       <h1>Last Chance Speed Co.</h1>
-      <p class="eyebrow">Idaho Falls, ID // Est. 2024</p>
-    </a>
-    <div class="status">
-      <span class="dot"></span>P3 SCCA Solo XB &mdash; Points Standing
+      <p>Drive. Build. Repeat.</p>
     </div>
-  </header>
+  </div>
 
-  <nav class="main-nav">
+  <nav>
+    <a href="index.html">Home</a>
     <a href="products.html">Products</a>
-    <a href="index.html#docs">Docs</a>
-    <a href="index.html#downloads">Downloads</a>
+    <a href="erx-1.html">ERX-L</a>
+    <a href="boethos.html">Boēthos</a>
+    <a href="fbdisc.html">FB Disc Kit</a>
+    <a href="docs.html">Docs</a>
     <a href="index.html#support">Support</a>
   </nav>
-  <div class="subnav">
-    <a href="products.html" class="active">Overview</a>
-    <a href="loggers.html">Loggers</a>
-    <a href="software.html">Software</a>
-    <a href="dash.html">Dash</a>
-    <a href="nodes.html">Nodes</a>
-  </div>
+</header>
 
-  <div class="hero small">
+<section class="hero">
+  <div class="hero-text">
     <h2>Products</h2>
-    <p>The Bo&#275;thos ecosystem: data loggers, the driver-facing app, dash displays, and expansion nodes.</p>
+    <p>
+      Data loggers, driver review software, and race parts &mdash; every product
+      Last Chance Speed Co. builds, developed and tested through real competition.
+    </p>
   </div>
+</section>
 
-  <section>
-    <div class="cards">
-      <div class="card">
-        <span class="tag live">Hardware</span>
-        <h3>Data Loggers</h3>
-        <p>The ERX family: GPS, IMU, and SD logging, from entry-level to flagship.</p>
-        <a class="button secondary" href="loggers.html">View Loggers</a>
-      </div>
-      <div class="card">
-        <span class="tag live">Software</span>
-        <h3>Bo&#275;thos App</h3>
-        <p>Course setup, sector points, Bluetooth connection, and driver-focused data review.</p>
-        <a class="button secondary" href="software.html">View Software</a>
-      </div>
-      <div class="card">
-        <span class="tag dev">Hardware</span>
-        <h3>Dash</h3>
-        <p>In-car display hardware, from the portable companion display to the flagship dash.</p>
-        <a class="button secondary" href="dash.html">View Dash</a>
-      </div>
-      <div class="card">
-        <span class="tag dev">Hardware</span>
-        <h3>Nodes</h3>
-        <p>CAN sensor expansion nodes &mdash; EGT, suspension travel, steering angle, and more.</p>
-        <a class="button secondary" href="nodes.html">View Nodes</a>
-      </div>
+<section id="products">
+  <h2>Data &amp; Software</h2>
+
+  <div class="cards">
+    <div class="card featured">
+      <span>Flagship Product</span>
+      <h3>ERX-L<sup>™</sup> Data Logger</h3>
+      <p>
+        A compact, battery-powered motorsport data system for GPS logging, IMU data,
+        Bluetooth setup, and microSD recording. Currently in beta.
+      </p>
+      <a class="button" href="erx-1.html">View ERX-L</a>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2026 LAST CHANCE SPEED CO. // DRIVE. BUILD. REPEAT.
-  </footer>
+    <div class="card">
+      <span>Software</span>
+      <h3>Boēthos<sup>™</sup></h3>
+      <p>
+        Driver review software and app ecosystem for course setup, gates,
+        sectors, run review, and data visualization.
+      </p>
+      <a class="button boethos-button" href="boethos.html">View Boēthos</a>
+    </div>
+  </div>
+</section>
+
+<section id="parts">
+  <h2>Vehicle Parts</h2>
+
+  <div class="cards">
+    <div class="card">
+      <span>FB RX-7</span>
+      <h3>Rear Disc Conversion</h3>
+      <p>
+        Practical brake conversion parts for first-gen RX-7 builds,
+        designed around real install needs.
+      </p>
+      <a class="button" href="fbdisc.html">View Kit</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="images/lcsc-logo.png" class="footer-logo" alt="LCSC Logo">
+  <p>© 2026 Last Chance Speed Co.</p>
+  <p class="trademark-line">
+    ERX-L™ and Boēthos™ are trademarks of Last Chance Speed Co.
+  </p>
+</footer>
 
 </body>
 </html>
