@@ -1,164 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Development Log | Last Chance Speed Co.</title>
-  <link rel="stylesheet" href="style.css" />
+    <title>LCSC Development Log</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <a href="index.html" class="logo">
-    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
-    <div>
-      <h1>Last Chance Speed Co.</h1>
-      <p>Drive. Build. Repeat.</p>
-    </div>
-  </a>
-  <nav>
+
+<div class="logo">
+    <h1>Last Chance Speed Co.</h1>
+    <p>Drive. Build. Repeat.</p>
+</div>
+
+<nav>
     <a href="index.html">Home</a>
-    <a href="erx-l.html">ERX-L</a>
+    <a href="erx-1.html">ERX-1</a>
     <a href="boethos.html">Boēthos</a>
-    <a href="docs.html">Docs</a>
-    <a href="erx-l.html#early-access" class="nav-cta">Early Access</a>
-  </nav>
+    <a href="development.html">Development</a>
+    <a href="fbdisc.html">FB Disc Kit</a>
+</nav>
+
 </header>
 
-<section class="hero" style="grid-template-columns: 1fr; max-width: 760px;">
-  <div class="hero-text">
-    <p class="hero-eyebrow">Last Chance Speed Co.</p>
-    <h2>Development Log</h2>
-    <h3>What's been built, tested, and shipped.</h3>
-  </div>
+<section class="content">
+
+<div class="dev-log">
+
+<h2>June 2026</h2>
+
+<ul>
+<li>ERX-1 Rev 1 hardware finalized for beta evaluation.</li>
+<li>Boēthos mobile application successfully communicating with ERX-1 hardware.</li>
+<li>GPS course gate workflow validated through real-world testing.</li>
+<li>Automatic start, finish, and sector upload functionality implemented.</li>
+<li>GPS replay and run visualization tools refined.</li>
+<li>ECU data acquisition integration continued.</li>
+<li>Public documentation and support system launched.</li>
+<li>Last Chance Speed Co. website deployed on custom domain.</li>
+<li>Private development repositories established for firmware, hardware, and software development.</li>
+<li>Preparation of initial beta hardware units underway.</li>
+</ul>
+
+
+</div>
+
+<div class="dev-log">
+
+<h2>May 2026</h2>
+
+<ul>
+<li>Bluetooth phone app communication operational.</li>
+<li>GPS start / finish gate setup operational.</li>
+<li>Sector timing support added.</li>
+<li>Automatic course upload concept implemented.</li>
+<li>GPS logging and SD card recording verified.</li>
+<li>GPS replay system refined.</li>
+<li>Multi-run comparison functionality expanded.</li>
+<li>Initial AI race engineer functionality tested.</li>
+<li>ECU data acquisition integrated into development platform.</li>
+</ul>
+
+</div>
+
+<div class="dev-log">
+
+<h2>Project Milestones</h2>
+
+<ul>
+<li>ERX-1 functional prototype completed.</li>
+<li>GPS logging operational.</li>
+<li>IMU logging operational.</li>
+<li>Bluetooth communication operational.</li>
+<li>Phone app communication operational.</li>
+<li>Course gate system operational.</li>
+<li>Automatic run trimming operational.</li>
+<li>GPS replay operational.</li>
+<li>ECU data acquisition operational.</li>
+<li>Boēthos driver analysis prototype operational.</li>
+</ul>
+
+</div>
+
+<div class="dev-log">
+
+<h2>Current Focus</h2>
+
+<ul>
+<li>Beta hardware preparation.</li>
+<li>Documentation expansion.</li>
+<li>Boēthos user interface refinement.</li>
+<li>GPS gate reliability testing.</li>
+<li>Expanded ECU integration.</li>
+<li>Real-world autocross validation.</li>
+</ul>
+
+</div>
+
+<div class="dev-log">
+
+<h2>Future Development</h2>
+
+<ul>
+<li>CAN bus expansion.</li>
+<li>Brake input integration.</li>
+<li>Clutch input integration.</li>
+<li>Additional ECU support.</li>
+<li>Live telemetry display.</li>
+<li>Advanced run comparison tools.</li>
+<li>Improved mobile application interface.</li>
+<li>Wireless firmware update capability.</li>
+<li>ERX-1 Rev 2 hardware.</li>
+<li>Advanced driver coaching tools.</li>
+</ul>
+
+</div>
+
+<div class="dev-log">
+
+<h2>Project Philosophy</h2>
+
+<p>
+Every LCSC product is developed through real-world use. Features are tested
+during actual competition and refined through continuous iteration, data
+analysis, and driver feedback. The goal is simple: build tools that help
+drivers better understand their vehicles and improve performance.
+</p>
+
+</div>
+
 </section>
-
-<div class="divider"></div>
-
-<section>
-  <p class="section-label">Current</p>
-  <h2>Current Focus</h2>
-  <div class="cards" style="margin-top: 32px;">
-    <div class="card">
-      <h3>Beta Hardware</h3>
-      <p>Three ERX-L units prepared and in tester selection.</p>
-    </div>
-    <div class="card">
-      <h3>Documentation</h3>
-      <p>Public documentation and support system being expanded.</p>
-    </div>
-    <div class="card">
-      <h3>Boēthos UI</h3>
-      <p>Mobile application interface refinement and run review functions.</p>
-    </div>
-    <div class="card">
-      <h3>GPS Reliability</h3>
-      <p>Gate trigger reliability testing and edge-case validation.</p>
-    </div>
-    <div class="card">
-      <h3>ECU Integration</h3>
-      <p>Expanded ECU data acquisition development.</p>
-    </div>
-    <div class="card">
-      <h3>Field Validation</h3>
-      <p>Real-world autocross competition testing continuing.</p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <p class="section-label">Log</p>
-  <h2>Development History</h2>
-
-  <div style="margin-top: 48px;">
-
-    <div class="dev-log">
-      <h2>June 2026</h2>
-      <ul>
-        <li>ERX-L Rev 1 hardware finalized for beta evaluation.</li>
-        <li>Boēthos mobile app successfully communicating with ERX-L hardware.</li>
-        <li>GPS course gate workflow validated through real-world testing.</li>
-        <li>Automatic start, finish, and sector upload implemented.</li>
-        <li>GPS replay and run visualization tools refined.</li>
-        <li>ECU data acquisition integration continued.</li>
-        <li>Public documentation and support system launched.</li>
-        <li>Last Chance Speed Co. website deployed on custom domain.</li>
-        <li>Private development repositories established for firmware, hardware, and software.</li>
-        <li>Initial beta hardware units in preparation.</li>
-      </ul>
-    </div>
-
-    <div class="dev-log">
-      <h2>May 2026</h2>
-      <ul>
-        <li>Bluetooth phone app communication operational.</li>
-        <li>GPS start / finish gate setup operational.</li>
-        <li>Sector timing support added.</li>
-        <li>Automatic course upload concept implemented.</li>
-        <li>GPS logging and microSD recording verified.</li>
-        <li>GPS replay system refined.</li>
-        <li>Multi-run comparison functionality expanded.</li>
-        <li>Initial AI race engineer functionality tested.</li>
-        <li>ECU data acquisition integrated into development platform.</li>
-      </ul>
-    </div>
-
-    <div class="dev-log">
-      <h2>Project Milestones</h2>
-      <ul>
-        <li>ERX-L functional prototype completed.</li>
-        <li>GPS logging operational.</li>
-        <li>IMU logging operational.</li>
-        <li>Bluetooth communication operational.</li>
-        <li>Phone app communication operational.</li>
-        <li>Course gate system operational.</li>
-        <li>Automatic run trimming operational.</li>
-        <li>GPS replay operational.</li>
-        <li>ECU data acquisition operational.</li>
-        <li>Boēthos driver analysis prototype operational.</li>
-      </ul>
-    </div>
-
-    <div class="dev-log">
-      <h2>Future Development</h2>
-      <ul>
-        <li>CAN bus expansion.</li>
-        <li>Brake and clutch input integration.</li>
-        <li>Additional ECU support.</li>
-        <li>Live telemetry display.</li>
-        <li>Advanced run comparison tools.</li>
-        <li>Wireless firmware update capability.</li>
-        <li>ERX-1 — expanded logger platform.</li>
-        <li>ERX-P — professional logger platform.</li>
-        <li>Advanced driver coaching tools.</li>
-      </ul>
-    </div>
-
-    <div class="dev-log">
-      <h2>Philosophy</h2>
-      <p>
-        Every LCSC product is developed through real-world use. Features are tested during
-        actual competition and refined through continuous iteration, data analysis, and driver
-        feedback. The goal is to build tools that help drivers better understand their
-        vehicles and improve performance.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <img src="images/lcsc-logo.png" class="footer-logo" alt="LCSC Logo">
-  <p>© 2026 Last Chance Speed Co.</p>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="erx-l.html">ERX-L</a>
-    <a href="boethos.html">Boēthos</a>
-    <a href="docs.html">Docs</a>
-  </div>
-</footer>
 
 </body>
 </html>
