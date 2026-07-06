@@ -4,231 +4,224 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Last Chance Speed Co.</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f1115;
+      color: #f2f2f2;
+    }
+
+    header {
+      background: #151922;
+      padding: 20px 40px;
+      border-bottom: 2px solid #e63946;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      color: #aaa;
+    }
+
+    nav {
+      background: #0b0d11;
+      padding: 12px 40px;
+    }
+
+    nav a {
+      color: #f2f2f2;
+      margin-right: 24px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e63946;
+    }
+
+    .hero {
+      padding: 70px 40px;
+      background: linear-gradient(135deg, #11151d, #1d2430);
+    }
+
+    .hero h2 {
+      font-size: 46px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      color: #ccc;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #e63946;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 45px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #181d27;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #2a3140;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #bbb;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      background: #2a3140;
+      color: #ddd;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0b0d11;
+      color: #888;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <a href="index.html" class="logo">
-    <img src="images/lcsc-logo.png" class="header-logo" alt="LCSC Logo">
-    <div>
-      <h1>Last Chance Speed Co.</h1>
-      <p>Drive. Build. Repeat.</p>
-    </div>
-  </a>
+  <header>
+    <h1>Last Chance Speed Co.</h1>
+    <p>Drive. Build. Repeat.</p>
+  </header>
+
   <nav>
-    <a href="erx-l.html">ERX-L</a>
-    <a href="boethos.html">Boēthos</a>
-    <a href="docs.html">Docs</a>
-    <a href="https://shop.lastchancespeedco.com" target="_blank">Shop</a>
-    <a href="erx-l.html#early-access" class="nav-cta">Early Access</a>
+    <a href="products.html">Products</a>
+    <a href="#docs">Docs</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#support">Support</a>
   </nav>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <p class="hero-eyebrow">Last Chance Speed Co.</p>
-    <h2>Performance Parts.<br>Driver Data.<br>Built by Competitors.</h2>
+  <div class="hero">
+    <h2>Performance parts, data systems, and race-tested development.</h2>
     <p>
-      LCSC develops motorsport hardware, driver data systems, and software through
-      real-world competition — tested in the paddock, refined on course.
+      Last Chance Speed Co. builds practical motorsport solutions for real cars,
+      real drivers, and real testing &mdash; from FB RX-7 parts to the full Boēthos telemetry ecosystem.
     </p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="#products">View Products</a>
-      <a class="btn btn-secondary" href="https://shop.lastchancespeedco.com" target="_blank">Shop Parts</a>
-      <a class="btn btn-secondary" href="docs.html">Documentation</a>
-    </div>
+    <a class="button" href="products.html">View Products</a>
   </div>
-  <div class="hero-image">
-    <img src="images/rx7.png" alt="FB RX-7">
-  </div>
-</section>
 
-<div class="divider"></div>
+  <section id="products">
+    <h2>Products</h2>
+    <p style="color:#bbb; max-width: 700px;">
+      Loggers, the Boēthos App, dash displays, and expansion nodes &mdash; browse the full lineup.
+    </p>
+    <a class="button" href="products.html">Browse Products</a>
+  </section>
 
-<!-- BUILT FROM SEAT -->
-<section>
-  <div class="about-split">
-    <div class="left">
-      <p class="section-label">The Origin</p>
-      <h2>Built from the driver's seat</h2>
-    </div>
-    <div class="right">
-      <p>
-        LCSC started by building, testing, breaking, and improving real parts on real cars.
-        From FB RX-7 development to the ERX-L data logger, every project starts with a
-        problem found in the garage, paddock, or on course.
-      </p>
-      <p>
-        Products are developed through firsthand experience, not theory. If it hasn't been
-        tested in competition, it's not ready.
-      </p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- STATS -->
-<section>
-  <p class="section-label">By The Numbers</p>
-  <div class="stats-grid">
-    <div class="stat-card">
-      <h3>112+</h3>
-      <p>YouTube Subscribers</p>
-    </div>
-    <div class="stat-card">
-      <h3>48</h3>
-      <p>Videos Published</p>
-    </div>
-    <div class="stat-card">
-      <h3>ERX-L Rev 1</h3>
-      <p>Current Development</p>
-    </div>
-    <div class="stat-card">
-      <h3>Boēthos</h3>
-      <p>Driver Data Software</p>
-    </div>
-  </div>
-  <a class="btn btn-secondary" href="https://www.youtube.com/@LastChanceSpeedCo" target="_blank">Watch the Build on YouTube</a>
-</section>
-
-<div class="divider"></div>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <p class="section-label">Products</p>
-  <h2>What We Build</h2>
-  <div class="cards">
-    <div class="card">
-      <span>Data Logger</span>
-      <h3>ERX-L</h3>
-      <p>
-        Compact motorsport data system for GPS logging, IMU data, Bluetooth setup,
-        microSD recording, and Boēthos integration.
-      </p>
-      <a class="btn btn-primary" href="erx-l.html">View ERX-L</a>
-    </div>
-    <div class="card">
-      <span>Software</span>
-      <h3>Boēthos</h3>
-      <p>
-        Driver review software and app ecosystem for course setup, run review,
-        sector analysis, and data visualization.
-      </p>
-      <a class="btn btn-secondary boethos-button" href="boethos.html">View Boēthos</a>
-    </div>
-    <div class="card">
-      <span>FB RX-7</span>
-      <h3>Rear Disc Conversion</h3>
-      <p>
-        Practical brake conversion kit for first-gen RX-7 builds, designed around
-        real install needs and serviceability.
-      </p>
-      <a class="btn btn-secondary" href="fbdisc.html">View Kit</a>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- STATUS -->
-<section id="status">
-  <p class="section-label">Development</p>
-  <h2>Current Status</h2>
-  <div class="status-grid">
-    <div class="status-card">
-      <h3>ERX-L Rev 1</h3>
-      <ul>
-        <li><span class="dot dot-done"></span>GPS logging</li>
-        <li><span class="dot dot-done"></span>IMU data</li>
-        <li><span class="dot dot-done"></span>microSD recording</li>
-        <li><span class="dot dot-done"></span>Bluetooth connection</li>
-        <li><span class="dot dot-done"></span>Phone app connection</li>
-        <li><span class="dot dot-done"></span>Course gate testing</li>
-        <li><span class="dot dot-active"></span>Beta units — selection in progress</li>
-      </ul>
-    </div>
-    <div class="status-card">
-      <h3>Boēthos</h3>
-      <ul>
-        <li><span class="dot dot-done"></span>Bluetooth connection</li>
-        <li><span class="dot dot-done"></span>Start/finish gate setup</li>
-        <li><span class="dot dot-done"></span>Sector point setup</li>
-        <li><span class="dot dot-done"></span>GPS replay visualization</li>
-        <li><span class="dot dot-active"></span>Run review</li>
-        <li><span class="dot dot-future"></span>Data overlay tools</li>
-        <li><span class="dot dot-future"></span>Driver coaching tools</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- VIDEO -->
-<section id="video">
-  <p class="section-label">Latest</p>
-  <h2>From the YouTube Channel</h2>
-  <div class="cards" style="grid-template-columns: 1fr; margin-top: 32px;">
-    <div class="card" style="display:grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items:center;">
-      <img src="images/rx7videothumb.jpg" alt="Latest Video" style="width:100%; border-radius:4px; border:1px solid var(--border); aspect-ratio:16/9; object-fit:cover; margin:0;">
-      <div>
-        <span>YouTube</span>
-        <h3>Drive. Build. Repeat.</h3>
-        <p style="margin: 8px 0 20px;">The latest event, the latest lessons, and the next step forward. Real competition is where every product gets tested.</p>
-        <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=3wgoVZ2a92A" target="_blank">Watch on YouTube</a>
+  <section id="rx7-parts">
+    <h2>FB RX-7 Parts</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">FB RX-7</span>
+        <h3>Rear Disc Conversion</h3>
+        <p>
+          A practical rear disc brake conversion solution for first-gen RX-7 builds.
+          Designed around usable parts and real-world install needs.
+        </p>
+        <a class="button" href="#support">Ask About It</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider"></div>
+  <section id="docs">
+    <h2>Documentation</h2>
 
-<!-- SUPPORT -->
-<section id="support">
-  <div class="about-split">
-    <div class="left">
-      <p class="section-label">Contact</p>
-      <h2>Support &amp; Questions</h2>
-    </div>
-    <div class="right">
-      <p>Product questions, beta testing, installation support, documentation feedback, or general inquiries.</p>
-      <div class="contact-block" style="margin-top: 20px;">
-        <span class="contact-label">Email</span>
-        <a href="mailto:LastChanceSpeedCo@outlook.com">LastChanceSpeedCo@outlook.com</a>
-        <span class="contact-label" style="margin-top: 16px;">YouTube</span>
-        <a href="https://www.youtube.com/@LastChanceSpeedCo" target="_blank">@LastChanceSpeedCo</a>
-        <span class="contact-label" style="margin-top: 16px;">GitHub</span>
-        <a href="https://github.com/LastChanceSpeedCo" target="_blank">github.com/LastChanceSpeedCo</a>
+    <div class="cards">
+      <div class="card">
+        <h3>Black Box Quick Start</h3>
+        <p>Basic setup, power, GPS lock, Bluetooth connection, and first log process.</p>
+      </div>
+
+      <div class="card">
+        <h3>Wiring / Pinout</h3>
+        <p>Sensor wiring, GPS, IMU, SD card, LEDs, Bluetooth, and ECU expansion notes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Firmware Updates</h3>
+        <p>Future firmware download and update instructions will live here.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <img src="images/lcsc-logo.png" class="footer-logo" alt="LCSC Logo">
-  <p>© 2026 Last Chance Speed Co.</p>
-  <div class="footer-links">
-    <a href="erx-l.html">ERX-L</a>
-    <a href="boethos.html">Boēthos</a>
-    <a href="docs.html">Docs</a>
-    <a href="development.html">Dev Log</a>
-    <a href="https://shop.lastchancespeedco.com" target="_blank">Shop</a>
-  </div>
-</footer>
+  <section id="downloads">
+    <h2>Downloads</h2>
 
-<script>
-document.querySelectorAll(".boethos-button").forEach(button => {
-  button.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.3s';
-    setTimeout(() => { window.location.href = this.href; }, 300);
-  });
-});
-</script>
+    <div class="cards">
+      <div class="card">
+        <h3>Firmware</h3>
+        <p>Black Box firmware files will be listed here.</p>
+      </div>
+
+      <div class="card">
+        <h3>Boēthos App</h3>
+        <p>Android APK or app installer links will go here.</p>
+      </div>
+
+      <div class="card">
+        <h3>Install Templates</h3>
+        <p>CAD files, brackets, templates, and printable guides can go here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>
+      For questions, product support, beta testing, or install help:
+    </p>
+    <p>
+      <strong>Email:</strong> lastchanceengineering@gmail.com
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Last Chance Speed Co. — Drive. Build. Repeat.
+  </footer>
 
 </body>
 </html>
