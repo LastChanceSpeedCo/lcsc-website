@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home — Last Chance Speed Co.</title>
+  <title>Nodes — Last Chance Speed Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -441,138 +441,42 @@
     <a href="index.html#downloads">Downloads</a>
     <a href="index.html#support">Support</a>
   </nav>
-
-  <div class="hero">
-    
-    <svg class="trace" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
-      <path class="line" d="M0,320 C40,300 60,180 90,190 C120,200 140,310 170,300 C210,285 230,90 260,80 C290,70 310,220 340,230 C380,245 400,140 430,120 C460,105 480,150 500,140" />
-      <path class="line alt" d="M0,250 C50,260 70,150 110,160 C150,170 160,280 200,270 C240,260 260,120 300,110 C340,100 360,200 400,210 C440,220 460,160 500,170" />
-    </svg>
-
-    <div class="hero-inner">
-      <h2>Every corner, measured.</h2>
-      <p>
-        Last Chance Speed Co. builds practical motorsport solutions for real cars,
-        real drivers, and real testing &mdash; from FB RX-7 parts to the Bo&#275;thos
-        telemetry ecosystem.
-      </p>
-      <div class="telemetry-readout">
-        <div><div class="label">CAR</div><div class="value">'82 RX-7 &middot; 12A</div></div>
-        <div><div class="label">CLASS</div><div class="value accent">SCCA XB</div></div>
-        <div><div class="label">STATUS</div><div class="value green">P3 IN POINTS</div></div>
-      </div>
-      <br>
-      <a class="button" href="products.html">View Products</a>
-      <a class="button secondary" href="#beta">Join the Beta</a>
-    </div>
+  <div class="subnav">
+    <a href="products.html">Overview</a>
+    <a href="loggers.html">Loggers</a>
+    <a href="software.html">Software</a>
+    <a href="dash.html">Dash</a>
+    <a href="nodes.html" class="active">Nodes</a>
   </div>
 
-  <section id="beta" class="beta-section" style="max-width:none; padding-left:0; padding-right:0;">
-    <div style="max-width:1140px; margin:auto; padding:55px 40px;">
-      <div class="beta-grid">
-        <div class="beta-copy">
-          <span class="tag dev">Beta Program</span>
-          <h2>Run it before anyone else does.</h2>
-          <p>
-            ERX-L beta units are going out to a small group of autocross and track drivers
-            for honest field feedback before wider release.
-          </p>
-          <ul>
-            <li>Units sold near cost &mdash; this is field testing, not a product launch</li>
-            <li>You get direct input into what ships next</li>
-            <li>Priority access to future ERX and Bo&#275;thos releases</li>
-          </ul>
-        </div>
+  <div class="hero small">
+    <h2>Nodes</h2>
+    <p>CAN-connected sensor expansion nodes that add channels to any ERX logger without touching the core wiring harness.</p>
+  </div>
 
-        <form class="beta-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="location">Location</label>
-          <input type="text" id="location" name="location" placeholder="City, State">
-
-          <label for="car">Car</label>
-          <input type="text" id="car" name="car" placeholder="Year / Make / Model">
-
-          <label for="discipline">Discipline</label>
-          <select id="discipline" name="discipline">
-            <option>Autocross</option>
-            <option>Track / HPDE</option>
-            <option>Rally</option>
-            <option>Other</option>
-          </select>
-
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes" placeholder="Anything you want us to know"></textarea>
-
-          <button type="submit">Request Beta Access</button>
-          <p class="form-note">Submissions come straight to our inbox. No spam, no mailing list.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="products">
-    <h2>Products</h2>
-    <p class="section-sub">Loggers, the Bo&#275;thos App, dash displays, and expansion nodes &mdash; browse the full lineup.</p>
-    <a class="button" href="products.html">Browse Products</a>
-  </section>
-
-  <section id="rx7-parts">
-    <h2>FB RX-7 Parts</h2>
+  <section>
     <div class="cards">
       <div class="card">
-        <span class="tag live">FB RX-7</span>
-        <h3>Rear Disc Conversion</h3>
-        <p>A practical rear disc brake conversion solution for first-gen RX-7 builds. Designed around usable parts and real-world install needs.</p>
-        <a class="button secondary" href="#support">Ask About It</a>
+        <span class="tag dev">In Development</span>
+        <h3>EGT Node</h3>
+        <p>Exhaust gas temperature sensing per cylinder or per runner, broadcast over CAN.</p>
+      </div>
+      <div class="card">
+        <span class="tag dev">In Development</span>
+        <h3>Suspension Node</h3>
+        <p>Linear travel sensors per corner for suspension travel and ride-height data.</p>
+      </div>
+      <div class="card">
+        <span class="tag dev">In Development</span>
+        <h3>Steering Angle Node</h3>
+        <p>Steering angle sensor for correlating driver input with yaw, understeer, and oversteer events.</p>
+      </div>
+      <div class="card">
+        <span class="tag dev">Planned</span>
+        <h3>More Nodes</h3>
+        <p>Additional CAN sensor nodes (tire temp, brake pressure, and more) are in development.</p>
       </div>
     </div>
-  </section>
-
-  <section id="docs">
-    <h2>Documentation</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>ERX-L Quick Start</h3>
-        <p>Basic setup, power, GPS lock, Bluetooth connection, and first log process.</p>
-      </div>
-      <div class="card">
-        <h3>Wiring / Pinout</h3>
-        <p>Sensor wiring, GPS, IMU, SD card, LEDs, and expansion notes.</p>
-      </div>
-      <div class="card">
-        <h3>Firmware Updates</h3>
-        <p>Future firmware download and update instructions will live here.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="downloads">
-    <h2>Downloads</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Firmware</h3>
-        <p>ERX-L firmware files will be listed here.</p>
-      </div>
-      <div class="card">
-        <h3>Bo&#275;thos App</h3>
-        <p>Windows installer and future Android APK links will go here.</p>
-      </div>
-      <div class="card">
-        <h3>Install Templates</h3>
-        <p>CAD files, brackets, templates, and printable guides can go here.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="support">
-    <h2>Support</h2>
-    <p style="color:var(--text-dim);">For questions, product support, beta testing, or install help:</p>
-    <p><strong>Email:</strong> lastchanceengineering@gmail.com</p>
   </section>
 
   <footer>
