@@ -585,3 +585,11 @@ sup {
   cursor: pointer;
   font-weight: bold;
 }
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 14px;
+}
